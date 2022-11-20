@@ -105,3 +105,65 @@ Console.Write($"Sum of elements in odd positions in the array is: {sum_newArray}
  
 // Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 // [3.0 7.2 22.7 2.1 78.3] -> 76.2
+/* 
+double [] CreatNewArray (int size, int minVal, int maxVal)
+{
+    double [] array = new double [size];
+
+    for (int i = 0; i < size; i++)
+    {
+        array [i] = Math.Round(new Random().Next(minVal, maxVal + 1) + new Random().NextDouble(), 1);
+    }
+    return array;
+}
+
+void ShowArray (double [] array)
+{
+    Console.Write("[");
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write ($"{array[i]}; ");
+    }
+    Console.WriteLine("\b\b]");
+}
+
+double maxElement (double [] array)
+{
+    double max = array[0];
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] > max)
+            {
+                max = array[i];
+            }
+    }
+    return max;
+}
+
+double minElement (double [] array)
+{
+    double min = array[0];
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] < min)
+            {
+                min = array[i];
+            }
+    }
+    return min;
+}
+
+Console.Write("Input count of alements of array: ");
+int size = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input min scope: ");
+int minV = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input max scope: ");
+int maxV = Convert.ToInt32(Console.ReadLine());
+
+double [] newArray = CreatNewArray (size, minV, maxV);
+ShowArray (newArray);
+
+Console.Write($"The difference between the maximum and minimum elements of an array: {Math.Round(maxElement (newArray) - minElement (newArray), 1)}.");
+ */
